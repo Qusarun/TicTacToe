@@ -57,13 +57,7 @@ bool check_win(char board[3][3]) {
             return true;
     }
 
-    if (check(board[0][0], board[1][1], board[2][2]))
-        return true;
-    
-    if (check(board[2][0], board[1][1], board[0][2]))
-        return true;
-
-    return false;
+    return check(board[0][0], board[1][1], board[2][2]) || check(board[2][0], board[1][1], board[0][2]);
 }
 
 /* main */
