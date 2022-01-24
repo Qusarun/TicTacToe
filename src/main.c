@@ -6,14 +6,14 @@
 #include <stdio.h>
 
 /* input */
-char* get_input() {
+char* get_input(void) {
     char* s = malloc(sizeof(char) * 8);
     fgets(s, 8, stdin);
     s[strcspn(s, "\n")] = 0;
     return s;
 }
 
-int* get_coordinates() {
+int* get_coordinates(void) {
     char* in = get_input();
     int* arr = malloc(sizeof(int) * 2);
 
@@ -61,7 +61,7 @@ bool check_win(char board[3][3]) {
 }
 
 /* main */
-void start() {
+void start(void) {
     /* initialize the board */
     char board[3][3];
     for (int i = 0; i < 3; i++) {
@@ -113,7 +113,7 @@ void start() {
 }
 
 /* entry */
-int main() {
+int main(void) {
     for (;;)
         start();
 }
